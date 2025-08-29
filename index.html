@@ -41,12 +41,10 @@
         <p class="hero-location">📍 Hyderabad, India</p>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn--primary">Contact Me</a>
-            <a href="https://drive.google.com/file/d/1BS7429tcntvWnpon7kmqE13fGcpfNAKu/view?usp=sharing"
-               class="btn btn--outline"
-               target="_blank"
-               rel="noopener noreferrer">
-                Download CV
-            </a>
+            <a href="https://drive.google.com/file/d/1BS7429tcntvWnpon7kmqE13fGcpfNAKu/view?usp=sharing" 
+               class="btn btn--outline" 
+               target="_blank" 
+               rel="noopener noreferrer">Download CV</a>
         </div>
     </div>
 </section>
@@ -269,24 +267,36 @@
                     <p>I'm always interested in discussing new opportunities, innovative projects, and collaborative ventures in machine learning and software development.</p>
                 </div>
             </div>
-            <form class="contact-form" id="contact-form">
+
+            <!-- Formspree Contact Form -->
+            <form action="https://formspree.io/f/xqadeygr" method="POST" class="contact-form">
                 <h4>Send me a message</h4>
+
                 <div class="form-group">
                     <label for="name" class="form-label">Full Name</label>
                     <input type="text" id="name" name="name" class="form-control" required>
                 </div>
+
                 <div class="form-group">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <input type="email" id="email" name="_replyto" class="form-control" required>
                 </div>
+
                 <div class="form-group">
                     <label for="subject" class="form-label">Subject</label>
                     <input type="text" id="subject" name="subject" class="form-control" required>
                 </div>
+
                 <div class="form-group">
                     <label for="message" class="form-label">Message</label>
                     <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
                 </div>
+
+                <!-- Hidden inputs -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Portfolio Contact Request">
+                <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html">
+
                 <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
             </form>
         </div>
